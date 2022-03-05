@@ -1,11 +1,10 @@
-import Button from '@/components/Button';
+import Button from '@components/Button';
 import tw, { styled } from 'twin.macro';
 
-/**
- * twin.macro bug fix
- * @see https://github.com/ben-rogerson/twin.macro/issues/606
- */
-const Box = styled.div(() => [tw`text-3xl font-bold underline`]);
+const Box = styled.div`
+  ${tw`text-3xl font-bold underline`}
+`;
+
 const Home = () => {
   return (
     <Box>

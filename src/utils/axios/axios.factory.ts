@@ -1,5 +1,5 @@
 import axios, { AxiosResponse, AxiosRequestConfig, AxiosError } from 'axios';
-import { API_URL } from '@/contants/environments';
+import { API_URL } from '@constants/environments';
 import qs from 'qs';
 
 /**
