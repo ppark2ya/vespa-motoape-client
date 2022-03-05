@@ -1,0 +1,10 @@
+name: vespa-motoape
+
+vespa-motoape:
+  component: "@sls-next/serverless-component@3.4.0"
+  inputs:
+    publicDirectoryCache: false
+    useServerlessTraceTarget: true
+    bucketName: ${env.BUCKET_NAME}
+    cloudfront:
+      distributionId: ${env.CF_DISTRIBUTION_ID}
