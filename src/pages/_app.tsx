@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { pageview } from '@lib/gtag';
 import Header from '@components/Header';
-
 import '@styles/globals.css';
 
 if (APP_STAGE !== 'prod') {
@@ -17,6 +16,12 @@ if (APP_STAGE !== 'prod') {
 }
 
 const queryClient = new QueryClient();
+queryClient.setDefaultOptions({
+  queries: {
+    staleTime: Infinity,
+    retry: 2,
+  },
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
